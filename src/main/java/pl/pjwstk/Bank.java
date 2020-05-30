@@ -5,7 +5,6 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
 
 @Getter
 @Setter
@@ -24,7 +23,9 @@ public class Bank {
         listAccount.add(accountNumber);
     }
 
-    public void getAcount(Account accountAumber) {
-        IntStream.range(0, listAccount.size()).forEach(i -> listAccount.get(i));
+    public void printAccount() {
+        for (int i = 0; i < listAccount.size(); i++) {
+            System.out.println("właściciel: " + listAccount.get(i).getUser().getLastName() + "\nnumer konta: " + listAccount.get(i).getAccountNumber() + "/nSaldo: " + listAccount.get(i).getAccountBalance() + "/n");
+        }
     }
 }
