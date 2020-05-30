@@ -6,9 +6,12 @@ public class Main {
         Account account1 = new Account(user1,001);
         Account account2 = new Account("Jan","Piertuszka",300521,002);
         Bank bank = new Bank("PKO", 4026);
+        bank.addAcount(account1);
+        bank.addAcount(account2);
         System.out.println(user1.getFirstName() + " " + user1.getLastName() + " " + user1.getIdNumber());
-        System.out.println(account1.getAccountNumber() + " " +account1.getUser().getFirstName());
+        System.out.println(account1.getAccountNumber() + " " +account1.getUser().getFirstName()+" "+ account1.getUser().getLastName());
         System.out.println(account2.getAccountNumber() + " " +account2.getUser().getFirstName());
         System.out.println(bank.getBankName() + " " + bank.getListAccount());
+        System.out.println(bank.getListAccount());
     }
 }
