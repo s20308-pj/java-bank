@@ -16,7 +16,7 @@ public class AccountValidator implements ConstraintValidator<InterfaceAccount, S
 
     @Override
     public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
- 
+        s=s.replace(" ","");
         boolean check = false;
         if (26 == s.length()) {
             check = true;
@@ -24,14 +24,14 @@ public class AccountValidator implements ConstraintValidator<InterfaceAccount, S
         for (int i = 0; i < s.length(); i++) {
             if (!isNumber(s.substring(i,i+1))){
                 return false;
-            };
+            }
         }
         return check;
     }
 
     static boolean isNumber(String s){
         try {
-            int test = Integer.parseInt(s);
+            Integer.parseInt(s);
         }catch (NumberFormatException e){
             return false;
         }

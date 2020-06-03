@@ -13,7 +13,7 @@ public class Bank {
     private int idBank;
     private List<Account> listAccount = new ArrayList<>();
 
-    public Bank(int ipBank, List<Account> listAccount) {
+    public Bank(int idBank, List<Account> listAccount) {
         this.idBank = idBank;
         this.listAccount = listAccount;
 
