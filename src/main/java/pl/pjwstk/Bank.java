@@ -10,22 +10,12 @@ import java.util.List;
 @Setter
 
 public class Bank {
-    private String bankName;
     private int idBank;
     private List<Account> listAccount = new ArrayList<>();
 
-    public Bank(String bankName, int idBank) {
-        this.bankName = bankName;
+    public Bank(int ipBank, List<Account> listAccount) {
         this.idBank = idBank;
-    }
+        this.listAccount = listAccount;
 
-    public void addAcount(Account accountNumber) {
-        listAccount.add(accountNumber);
-    }
-
-    public void printAccount() {
-        for (int i = 0; i < listAccount.size(); i++) {
-            System.out.println("właściciel: " + listAccount.get(i).getUser().getLastName() + "\nnumer konta: " + listAccount.get(i).getAccountNumber() + "/nSaldo: " + listAccount.get(i).getAccountBalance() + "/n");
-        }
     }
 }
